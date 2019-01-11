@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches unlocked snapshot 1`] = `
+<Dice
+  dice={
+    Array [
+      false,
+      false,
+      false,
+      false,
+      false,
+    ]
+  }
+  locked={
+    Array [
+      true,
+      false,
+      true,
+      false,
+      true,
+    ]
+  }
+>
+  <div
+    className="Dice"
+  >
+    <Die
+      idx={0}
+      key="0"
+      locked={true}
+      val={false}
+    >
+      <button
+        className="Die Die-locked"
+        onClick={[Function]}
+      >
+        // can not be clicked if the this.props.locked is true
+      </button>
+    </Die>
+    <Die
+      idx={1}
+      key="1"
+      locked={false}
+      val={false}
+    >
+      <button
+        className="Die"
+        onClick={[Function]}
+      >
+        // can not be clicked if the this.props.locked is true
+      </button>
+    </Die>
+    <Die
+      idx={2}
+      key="2"
+      locked={true}
+      val={false}
+    >
+      <button
+        className="Die Die-locked"
+        onClick={[Function]}
+      >
+        // can not be clicked if the this.props.locked is true
+      </button>
+    </Die>
+    <Die
+      idx={3}
+      key="3"
+      locked={false}
+      val={false}
+    >
+      <button
+        className="Die"
+        onClick={[Function]}
+      >
+        // can not be clicked if the this.props.locked is true
+      </button>
+    </Die>
+    <Die
+      idx={4}
+      key="4"
+      locked={true}
+      val={false}
+    >
+      <button
+        className="Die Die-locked"
+        onClick={[Function]}
+      >
+        // can not be clicked if the this.props.locked is true
+      </button>
+    </Die>
+  </div>
+</Dice>
+`;
