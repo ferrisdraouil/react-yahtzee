@@ -73,10 +73,12 @@ class SmallStraight extends Rule {
   evalRoll = dice => {
     const d = new Set(dice);
 
-    // large straight must be 5 different dice & only one can be a 1 or a 6
-    return d.size >= 4 && d.has(3) && d.has(4) && (!d.has(1) || !d.has(6))
-      ? this.score
-      : 0;
+    return (
+      d.size >= 4 &&
+      (!(d.has(5) && d.has(6)) ||
+        !(d.has(1) && d.has(6)) ||
+        !(d.has(1) && d.has(2)))
+    );
   };
 }
 
