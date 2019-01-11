@@ -33,9 +33,7 @@ exports[`matches unlocked snapshot 1`] = `
       <button
         className="Die Die-locked"
         onClick={[Function]}
-      >
-        // can not be clicked if the this.props.locked is true
-      </button>
+      />
     </Die>
     <Die
       idx={1}
@@ -46,9 +44,7 @@ exports[`matches unlocked snapshot 1`] = `
       <button
         className="Die"
         onClick={[Function]}
-      >
-        // can not be clicked if the this.props.locked is true
-      </button>
+      />
     </Die>
     <Die
       idx={2}
@@ -59,9 +55,7 @@ exports[`matches unlocked snapshot 1`] = `
       <button
         className="Die Die-locked"
         onClick={[Function]}
-      >
-        // can not be clicked if the this.props.locked is true
-      </button>
+      />
     </Die>
     <Die
       idx={3}
@@ -72,9 +66,7 @@ exports[`matches unlocked snapshot 1`] = `
       <button
         className="Die"
         onClick={[Function]}
-      >
-        // can not be clicked if the this.props.locked is true
-      </button>
+      />
     </Die>
     <Die
       idx={4}
@@ -85,9 +77,7 @@ exports[`matches unlocked snapshot 1`] = `
       <button
         className="Die Die-locked"
         onClick={[Function]}
-      >
-        // can not be clicked if the this.props.locked is true
-      </button>
+      />
     </Die>
   </div>
 </Dice>

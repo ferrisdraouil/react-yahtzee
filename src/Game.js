@@ -10,9 +10,9 @@ class Game extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dice: Array.from({ length: NUM_DICE }),
+      dice: Array.from({ length: 5 }, () => Math.ceil(Math.random() * 6)),
       locked: Array(NUM_DICE).fill(false),
-      rollsLeft: NUM_ROLLS,
+      rollsLeft: NUM_ROLLS, // -8, -9
       scores: {
         ones: undefined,
         twos: undefined,
@@ -36,13 +36,15 @@ class Game extends Component {
 
   roll(evt) {
     // roll dice whose indexes are in reroll
-    this.setState(st => ({
-      dice: st.dice.map((d, i) =>
-        st.locked[i] ? d : Math.ceil(Math.random() * 6)
-      ),
-      locked: st.rollsLeft > 1 ? st.locked : Array(NUM_DICE).fill(true),
-      rollsLeft: st.rollsLeft - 1
-    }));
+    if (this.state.rollsLeft > 0) {
+      this.setState(st => ({
+        dice: st.dice.map((d, i) =>
+          st.locked[i] ? d : Math.ceil(Math.random() * 6)
+        ),
+        locked: st.rollsLeft > 1 ? st.locked : Array(NUM_DICE).fill(true),
+        rollsLeft: st.rollsLeft > 1 ? st.rollsLeft - 1 : 0
+      }));
+    }
   }
 
   toggleLocked(idx) {

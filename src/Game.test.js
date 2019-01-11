@@ -15,3 +15,15 @@ it('should change Die CSS onClick', function() {
   die = wrapper.find('Die').at(0);
   expect(die.props().locked).toEqual(true);
 });
+
+describe('cann only clicked once, score does not change', () => {
+  it('the score doesnt change if it is clicked', () => {
+    const wrapper = mount(<Game />);
+    wrapper.setState({ scores: { ones: 0 } });
+    let ones = wrapper.find('RuleRow').at(0);
+    // console.log(ones.debug());
+    ones.simulate('click');
+    ones = wrapper.find('RuleRow').at(0);
+    expect(ones.props().score).toBe(0);
+  });
+});
